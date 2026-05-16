@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "extract": "bun run scripts/extract-raja-ongkir.ts",
+    "extract": "bun run src/index.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

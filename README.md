@@ -1,4 +1,4 @@
-# extract-raja-ongkir
+# Raja Ongkir Destination 
 
 Crawl the [Raja Ongkir Komerce](https://rajaongkir.komerce.id) destination API and emit PostgreSQL `schema.sql` + `seed.sql` for Indonesian provinces, cities/regencies, districts, and sub-districts.
 
