@@ -1,5 +1,6 @@
 import type { ExtractConfig } from "@/types/index";
 import { type CliOptions, validateCliNumbers } from "@/services/cli";
+import { loadTableNames } from "@/lib/tables";
 import { numEnv } from "@/lib/util";
 
 export function loadConfig(opts: CliOptions): ExtractConfig {
@@ -19,6 +20,7 @@ export function loadConfig(opts: CliOptions): ExtractConfig {
     batchSize: Math.max(1, numEnv("BATCH_SIZE", 750)),
     maxRetries: Math.max(1, numEnv("MAX_RETRIES", 3)),
     dryRun: Boolean(opts["dry-run"]),
+    tables: loadTableNames(),
     maxProvinces,
     provinceStart,
     provinceEnd,

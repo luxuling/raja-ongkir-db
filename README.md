@@ -26,7 +26,7 @@ Outputs (default `./sql-out/`):
 
 | File | Contents |
 |------|----------|
-| `schema.sql` | `raja_provinces`, `raja_cities`, `raja_districts`, `raja_sub_districts` |
+| `schema.sql` | DDL for your configured table names |
 | `seed.sql` | `TRUNCATE` those tables, then batched `INSERT`s |
 
 Load into Postgres:
@@ -36,7 +36,7 @@ psql "$DATABASE_URL" -f sql-out/schema.sql
 psql "$DATABASE_URL" -f sql-out/seed.sql
 ```
 
-`seed.sql` only truncates the four `raja_*` tables before inserting.
+`seed.sql` only truncates the four destination tables (names from env) before inserting.
 
 ## Options
 
@@ -54,6 +54,11 @@ bun run scripts/extract-raja-ongkir.ts --help
 | `REQUEST_DELAY_MS` | `100` | Delay between API requests |
 | `BATCH_SIZE` | `750` | Rows per `INSERT` in `seed.sql` |
 | `MAX_RETRIES` | `3` | Retries per failed request |
+| `TABLE_PREFIX` | `raja_` | Prefix for default table names |
+| `TABLE_PROVINCES` | `{prefix}provinces` | Override province table name |
+| `TABLE_CITIES` | `{prefix}cities` | Override city table name |
+| `TABLE_DISTRICTS` | `{prefix}districts` | Override district table name |
+| `TABLE_SUB_DISTRICTS` | `{prefix}sub_districts` | Override sub-district table name |
 
 ## Notes
 

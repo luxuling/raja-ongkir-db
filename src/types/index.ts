@@ -38,6 +38,13 @@ export type CrawlResult = {
   subDistricts: SubDistrictRecord[];
 };
 
+export type TableNames = {
+  provinces: string;
+  cities: string;
+  districts: string;
+  subDistricts: string;
+};
+
 export type ExtractConfig = {
   apiKey: string;
   outDir: string;
@@ -45,6 +52,7 @@ export type ExtractConfig = {
   batchSize: number;
   maxRetries: number;
   dryRun: boolean;
+  tables: TableNames;
   maxProvinces?: number;
   provinceStart?: number;
   provinceEnd?: number;

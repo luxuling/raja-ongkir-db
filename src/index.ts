@@ -17,6 +17,9 @@ async function main() {
 
   console.log(`Output directory: ${config.outDir}`);
   console.log(
+    `Tables: ${config.tables.provinces}, ${config.tables.cities}, ${config.tables.districts}, ${config.tables.subDistricts}`,
+  );
+  console.log(
     `REQUEST_DELAY_MS=${config.delayMs}, BATCH_SIZE=${config.batchSize}, MAX_RETRIES=${config.maxRetries}`,
   );
   if (config.dryRun) console.log("Dry run: limiting crawl to a shallow sample.");
@@ -36,6 +39,7 @@ async function main() {
     config.outDir,
     data,
     config.batchSize,
+    config.tables,
   );
 
   console.log(`Wrote ${schemaPath}`);

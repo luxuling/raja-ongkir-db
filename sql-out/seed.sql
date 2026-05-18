@@ -1,9 +1,9 @@
--- Raja Ongkir seed (destructive truncate of raja_* only)
+-- Raja Ongkir seed (destructive truncate of * only)
 BEGIN;
 
-TRUNCATE raja_sub_districts, raja_districts, raja_cities, raja_provinces RESTART IDENTITY CASCADE;
+TRUNCATE sub_districts, districts, cities, provinces RESTART IDENTITY CASCADE;
 
-INSERT INTO raja_provinces (id, name)
+INSERT INTO provinces (id, name)
 VALUES
 (1, 'NUSA TENGGARA BARAT (NTB)'),
 (2, 'MALUKU'),
@@ -40,7 +40,7 @@ VALUES
 (33, 'SULAWESI SELATAN'),
 (34, 'SULAWESI BARAT');
 
-INSERT INTO raja_cities (id, province_id, name, zip_code)
+INSERT INTO cities (id, province_id, name, zip_code)
 VALUES
 (1, 1, 'MATARAM', NULL),
 (2, 1, 'BIMA', NULL),
@@ -532,7 +532,7 @@ VALUES
 (687, 34, 'MAMASA', NULL),
 (688, 34, 'MAMUJU UTARA', NULL);
 
-INSERT INTO raja_districts (id, city_id, name, zip_code)
+INSERT INTO districts (id, city_id, name, zip_code)
 VALUES
 (1, 1, 'MATARAM', NULL),
 (2, 1, 'AMPENAN', NULL),
@@ -1285,7 +1285,7 @@ VALUES
 (749, 77, 'BOGOR UTARA - KOTA', NULL),
 (750, 77, 'TANAH SEREAL', NULL);
 
-INSERT INTO raja_districts (id, city_id, name, zip_code)
+INSERT INTO districts (id, city_id, name, zip_code)
 VALUES
 (751, 77, 'CIBINONG', NULL),
 (752, 77, 'CARINGIN', NULL),
@@ -2038,7 +2038,7 @@ VALUES
 (1499, 149, 'KAWUNGANTEN', NULL),
 (1500, 149, 'KEDUNGREJA', NULL);
 
-INSERT INTO raja_districts (id, city_id, name, zip_code)
+INSERT INTO districts (id, city_id, name, zip_code)
 VALUES
 (1501, 149, 'KESUGIHAN', NULL),
 (1502, 149, 'MAOS', NULL),
@@ -2791,7 +2791,7 @@ VALUES
 (2249, 220, 'GIDO', NULL),
 (2250, 220, 'HILIDUHO', NULL);
 
-INSERT INTO raja_districts (id, city_id, name, zip_code)
+INSERT INTO districts (id, city_id, name, zip_code)
 VALUES
 (2251, 220, 'IDANO GAWO', NULL),
 (2252, 221, 'MANDREHE', NULL),
@@ -3544,7 +3544,7 @@ VALUES
 (2999, 300, 'MAPITARA', NULL),
 (3000, 300, 'MAGEPANDA', NULL);
 
-INSERT INTO raja_districts (id, city_id, name, zip_code)
+INSERT INTO districts (id, city_id, name, zip_code)
 VALUES
 (3001, 300, 'KOTING', NULL),
 (3002, 300, 'KANGAE', NULL),
@@ -4297,7 +4297,7 @@ VALUES
 (3749, 384, 'SADANG', NULL),
 (3750, 384, 'SRUWENG', NULL);
 
-INSERT INTO raja_districts (id, city_id, name, zip_code)
+INSERT INTO districts (id, city_id, name, zip_code)
 VALUES
 (3751, 384, 'GOMBONG', NULL),
 (3752, 384, 'AYAH', NULL),
@@ -5050,7 +5050,7 @@ VALUES
 (4499, 472, 'SUKAMARA', NULL),
 (4500, 472, 'BALAI RIAM', NULL);
 
-INSERT INTO raja_districts (id, city_id, name, zip_code)
+INSERT INTO districts (id, city_id, name, zip_code)
 VALUES
 (4501, 472, 'JELAI', NULL),
 (4502, 472, 'PANTAI LUNCI', NULL),
@@ -5803,7 +5803,7 @@ VALUES
 (5249, 538, 'TEGALBULEUD', NULL),
 (5250, 538, 'WALURAN', NULL);
 
-INSERT INTO raja_districts (id, city_id, name, zip_code)
+INSERT INTO districts (id, city_id, name, zip_code)
 VALUES
 (5251, 538, 'WARUNGKIARA', NULL),
 (5252, 538, 'LEMBURSITU', NULL),
@@ -6556,7 +6556,7 @@ VALUES
 (5999, 583, 'KREMBUNG', NULL),
 (6000, 583, 'PORONG', NULL);
 
-INSERT INTO raja_districts (id, city_id, name, zip_code)
+INSERT INTO districts (id, city_id, name, zip_code)
 VALUES
 (6001, 583, 'SEDATI', NULL),
 (6002, 583, 'SUKODONO', NULL),
@@ -7309,7 +7309,7 @@ VALUES
 (6749, 649, 'SINOA', NULL),
 (6750, 649, 'GANTARANG KEKE (GANTARENG KEKE)', NULL);
 
-INSERT INTO raja_districts (id, city_id, name, zip_code)
+INSERT INTO districts (id, city_id, name, zip_code)
 VALUES
 (6751, 650, 'BARRU', NULL),
 (6752, 650, 'MALLUSETASI', NULL),
@@ -7688,7 +7688,7 @@ VALUES
 (7125, 433, 'BINAWIDYA', NULL),
 (7126, 433, 'TUAHMADANI', NULL);
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (1, 1, 'MATARAM TIMUR', '83121'),
 (2, 1, 'PAGESANGAN', '83127'),
@@ -8441,7 +8441,7 @@ VALUES
 (751, 77, 'SENARU', '83354'),
 (752, 77, 'SUKADANA', '83354');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (753, 78, 'BENTEK', '83353'),
 (754, 78, 'GENGGELANG', '83353'),
@@ -9194,7 +9194,7 @@ VALUES
 (1503, 146, 'SOMLAIN', '97615'),
 (1504, 146, 'TANIMBAR KEI', '97615');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (1505, 146, 'UR PULAU', '97615'),
 (1506, 146, 'WARBAL', '97615'),
@@ -9947,7 +9947,7 @@ VALUES
 (2259, 217, 'WERMATANG', '97464'),
 (2260, 218, 'AMDASA', '97464');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (2261, 218, 'ARUI BAB', '97464'),
 (2262, 218, 'ARUI DAS', '97464'),
@@ -10700,7 +10700,7 @@ VALUES
 (3012, 289, 'MADANG', '71555'),
 (3013, 289, 'MANDUIN', '71555');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (3014, 289, 'MANTUIL', '71555'),
 (3015, 289, 'MURUNG KARANGAN', '71555'),
@@ -11453,7 +11453,7 @@ VALUES
 (3765, 344, 'SEI/SUNGAI RANGAS HAMBUKU', '70618'),
 (3766, 344, 'SEI/SUNGAI RANGAS TENGAH', '70618');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (3767, 344, 'SEI/SUNGAI RANGAS ULU', '70618'),
 (3768, 344, 'TANGKAS', '70618'),
@@ -12206,7 +12206,7 @@ VALUES
 (4520, 405, 'MURUNG ILUNG', '71662'),
 (4521, 405, 'PARAN', '71662');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (4522, 405, 'PARINGIN KOTA', '71662'),
 (4523, 405, 'PARINGIN TIMUR', '71662'),
@@ -12959,7 +12959,7 @@ VALUES
 (5272, 488, 'GENDEREH', '45392'),
 (5273, 488, 'HARIANG', '45392');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (5274, 488, 'KARANGBUNGUR', '45392'),
 (5275, 488, 'MEKARMUKTI', '45392'),
@@ -13712,7 +13712,7 @@ VALUES
 (6023, 558, 'PANGAUBAN', '40561'),
 (6024, 558, 'SELACAU', '40561');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (6025, 559, 'CIKALONG', '40556'),
 (6026, 559, 'CIPADA', '40556'),
@@ -14465,7 +14465,7 @@ VALUES
 (6776, 636, 'TABA TERUNJAM', '38382'),
 (6777, 636, 'TALANG EMPAT', '38385');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (6778, 636, 'UJUNG KARANG', '38382'),
 (6779, 637, 'AUR GADING', '38374'),
@@ -15218,7 +15218,7 @@ VALUES
 (7527, 694, 'SUKA BANJAR', '38963'),
 (7528, 694, 'SUKA RAJA', '38963');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (7529, 694, 'TANJUNG AGUNG', '38963'),
 (7530, 694, 'TANJUNG BUNGA', '38963'),
@@ -15971,7 +15971,7 @@ VALUES
 (8282, 758, 'TAJUR HALANG', '16740'),
 (8283, 758, 'TANJUNG SARI', '16740');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (8284, 758, 'WARUNG MENTENG', '16740'),
 (8285, 759, 'CILEUNGSI', '16820'),
@@ -16724,7 +16724,7 @@ VALUES
 (9036, 832, 'MEKAR BARU', '75556'),
 (9037, 832, 'RANTAU SENTOSA', '75556');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (9038, 833, 'BANGUN JAYA', '75618'),
 (9039, 833, 'BUKIT HARAPAN', '75618'),
@@ -17477,7 +17477,7 @@ VALUES
 (9797, 919, 'TANJONG SEULAMAT', '23373'),
 (9798, 919, 'TANJUNG DEYAH', '23373');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (9799, 919, 'TUNGKOP', '23373'),
 (9800, 920, 'ANEUK GLEE', '23363'),
@@ -18230,7 +18230,7 @@ VALUES
 (10548, 944, 'COT MANE', '24356'),
 (10549, 944, 'COT PUUK', '24356');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (10550, 944, 'COT RAMBAT', '24356'),
 (10551, 944, 'COT TUBE/TEUBEE', '24356'),
@@ -18983,7 +18983,7 @@ VALUES
 (11299, 971, 'PENYEBERANGAN CINGKAM', '24652'),
 (11300, 971, 'RUMAH BUNDAR', '24652');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (11301, 971, 'SIMPANG III JONGAR', '24652'),
 (11302, 971, 'SIMPUR JAYA', '24652'),
@@ -19736,7 +19736,7 @@ VALUES
 (12050, 997, 'BAYU TEUBENG', '24151'),
 (12051, 997, 'BIE', '24151');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (12052, 997, 'BLANGKULA', '24151'),
 (12053, 997, 'COT GEULUMPANG', '24151'),
@@ -20489,7 +20489,7 @@ VALUES
 (12801, 1029, 'KEUDE TRUMON', '23774'),
 (12802, 1029, 'KUTA BARO/BARU', '23774');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (12803, 1029, 'KUTA PADANG', '23774'),
 (12804, 1029, 'PADANG HARAPAN', '23774'),
@@ -21242,7 +21242,7 @@ VALUES
 (13553, 1080, 'PEMATANG DURIAN', '24476'),
 (13554, 1080, 'SEKERAK KANAN', '24476');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (13555, 1080, 'SEKERAK KIRI', '24476'),
 (13556, 1080, 'SEKUMUR', '24476'),
@@ -21995,7 +21995,7 @@ VALUES
 (14303, 1112, 'COT MERBO/MEUREUBO', '24371'),
 (14304, 1112, 'COT MEUNYE CUT', '24371');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (14305, 1112, 'COT RHEUE', '24371'),
 (14306, 1112, 'COT SEUMINYONG (SUMIYONG)', '24371'),
@@ -22748,7 +22748,7 @@ VALUES
 (15054, 1137, 'BENER MERIAH', '24553'),
 (15055, 1137, 'BINTANG BERANGUN', '24553');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (15056, 1137, 'BLANG ARA', '24553'),
 (15057, 1137, 'BLANG RAKAL', '24553'),
@@ -23501,7 +23501,7 @@ VALUES
 (15807, 1176, 'AIR PINANG', '23891'),
 (15808, 1176, 'AMAITENG MULIA', '23891');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (15809, 1176, 'AMERIA BAHAGIA', '23891'),
 (15810, 1176, 'GANTING', '23891'),
@@ -24254,7 +24254,7 @@ VALUES
 (16560, 1243, 'KALAPAGUNUNG', '45553'),
 (16561, 1243, 'KARAMATMULYA', '45553');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (16562, 1243, 'KARANGMANGU', '45553'),
 (16563, 1243, 'KASTURI', '45521'),
@@ -25007,7 +25007,7 @@ VALUES
 (17310, 1306, 'BUNDER', '45166'),
 (17311, 1306, 'GINTUNG LOR', '45166');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (17312, 1306, 'JATIANOM', '45166'),
 (17313, 1306, 'JATIPURA', '45166'),
@@ -25760,7 +25760,7 @@ VALUES
 (18069, 1404, 'TEGALWANGI', '42262'),
 (18070, 1405, 'CIBITUNG', '42276');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (18071, 1405, 'CURUGLANGLANG', '42276'),
 (18072, 1405, 'GUNUNGBATU', '42276'),
@@ -26513,7 +26513,7 @@ VALUES
 (18820, 1472, 'PELAWAD', '42182'),
 (18821, 1472, 'PENGGALANG', '42182');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (18822, 1472, 'PULO', '42182'),
 (18823, 1472, 'RANJENG', '42182'),
@@ -27266,7 +27266,7 @@ VALUES
 (19573, 1545, 'MUARA/MUARO BELENGO', '37352'),
 (19574, 1545, 'PAMENANG', '37352');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (19575, 1545, 'PAUH MENANG', '37352'),
 (19576, 1545, 'PELAKAR JAYA', '37352'),
@@ -28019,7 +28019,7 @@ VALUES
 (20324, 1610, 'MUKAI SEBERANG', '37162'),
 (20325, 1610, 'MUKAI TENGAH', '37162');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (20326, 1610, 'MUKAI TINGGI', '37162'),
 (20327, 1610, 'PASIR JAYA', '37162'),
@@ -28772,7 +28772,7 @@ VALUES
 (21077, 1681, 'PARAY (PARAI)', '98118'),
 (21078, 1681, 'SAMAU', '98118');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (21079, 1681, 'SANUMI', '98118'),
 (21080, 1681, 'SARAMOM', '98114'),
@@ -29525,7 +29525,7 @@ VALUES
 (21829, 1751, 'BUKURIK', '99587'),
 (21830, 1751, 'BUMBUM', '99587');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (21831, 1751, 'BURIM', '99587'),
 (21832, 1751, 'DAHONAIKMA', '99587'),
@@ -30278,7 +30278,7 @@ VALUES
 (22580, 1819, 'INGGEMBIT (ENGGEMBIT)', '99664'),
 (22581, 1819, 'JETETKUN / YETETKUN', '99664');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (22582, 1819, 'KANGGEWOT', '99664'),
 (22583, 1819, 'UPKIM', '99664'),
@@ -31031,7 +31031,7 @@ VALUES
 (23331, 1904, 'KAWE', '99575'),
 (23332, 1904, 'MIKIR', '99575');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (23333, 1904, 'NANUM ANAIP', '99575'),
 (23334, 1904, 'YELOBIB', '99575'),
@@ -31784,7 +31784,7 @@ VALUES
 (24082, 1972, 'KUPARA', '99568'),
 (24083, 1972, 'KUTIME', '99568');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (24084, 1972, 'LOGILOME', '99568'),
 (24085, 1972, 'MISSA', '99568'),
@@ -32537,7 +32537,7 @@ VALUES
 (24833, 2044, 'SAMBOGA', '99571'),
 (24834, 2044, 'SEREDELA', '99571');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (24835, 2044, 'TERET', '99571'),
 (24836, 2044, 'TOKUNI', '99571'),
@@ -33290,7 +33290,7 @@ VALUES
 (25584, 2117, 'DUA LANNY', '99567'),
 (25585, 2117, 'GENENA', '99567');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (25586, 2117, 'ILUNGGIME', '99567'),
 (25587, 2117, 'KABIGA', '99567'),
@@ -34043,7 +34043,7 @@ VALUES
 (26338, 2201, 'PENDEM', '82211'),
 (26339, 2201, 'PERANCAK', '82218');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (26340, 2201, 'SANGKARAGUNG', '82218'),
 (26341, 2201, 'YEH KUNING', '82218'),
@@ -34796,7 +34796,7 @@ VALUES
 (27095, 2251, 'HILI''ADULO', '22872'),
 (27096, 2251, 'HILIGOGOWAYA MALIWA''A', '22872');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (27097, 2251, 'HILILAWAE', '22872'),
 (27098, 2251, 'HILIMOASIO', '22872'),
@@ -35549,7 +35549,7 @@ VALUES
 (27845, 2302, 'MARAFALA', '22853'),
 (27846, 2302, 'MOAWO', '22853');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (27847, 2302, 'OMBOLATA', '22853'),
 (27848, 2302, 'ONOZALUKHU', '22853'),
@@ -36302,7 +36302,7 @@ VALUES
 (28598, 2361, 'TAPIAN NAULI I', '22471'),
 (28599, 2361, 'TAPIAN NAULI II', '22471');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (28600, 2361, 'TAPIAN NAULI III', '22471'),
 (28601, 2362, 'ARITONANG', '22476'),
@@ -37055,7 +37055,7 @@ VALUES
 (29356, 2393, 'SIKAPAS', '22989'),
 (29357, 2393, 'SUKA MAKMUR', '22989');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (29358, 2393, 'TABUYUNG', '22989'),
 (29359, 2393, 'TAGILANG JULU', '22989'),
@@ -37808,7 +37808,7 @@ VALUES
 (30116, 2441, 'MOTODUTO', '96264'),
 (30117, 2441, 'PARUNGI', '96264');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (30118, 2441, 'POTANGA', '96264'),
 (30119, 2441, 'SIDODADI', '96264'),
@@ -38561,7 +38561,7 @@ VALUES
 (30867, 2522, 'GELANG', '68156'),
 (30868, 2522, 'JAMBESARI', '68156');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (30869, 2522, 'JAMINTORO', '68156'),
 (30870, 2522, 'JATIROTO', '68156'),
@@ -39314,7 +39314,7 @@ VALUES
 (31618, 2631, 'GIRIPURWO', '55674'),
 (31619, 2631, 'JATIMULYO', '55674');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (31620, 2631, 'PENDOWOREJO', '55674'),
 (31621, 2631, 'PURWOSARI', '55674'),
@@ -40067,7 +40067,7 @@ VALUES
 (32373, 2718, 'KAMBOWA', '93673'),
 (32374, 2718, 'KONDO', '93673');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (32375, 2718, 'LAGUNDI', '93673'),
 (32376, 2718, 'LAHAMOKO JAYA', '93673'),
@@ -40820,7 +40820,7 @@ VALUES
 (33125, 2792, 'NGGULANGGULA', '93752'),
 (33126, 2792, 'TONGALI', '93752');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (33127, 2792, 'WAINDAWULA', '93752'),
 (33128, 2792, 'WAKINAMBORO', '93752'),
@@ -41573,7 +41573,7 @@ VALUES
 (33876, 2855, 'AWILA', '93352'),
 (33877, 2855, 'AWILA PUNCAK', '93352');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (33878, 2855, 'BANDAEHA', '93352'),
 (33879, 2855, 'MANDIOPO (MANDIODO)', '93352'),
@@ -42326,7 +42326,7 @@ VALUES
 (34628, 2916, 'DUA LAUS', '85752'),
 (34629, 2916, 'FATUKETI', '85752');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (34630, 2916, 'JENILU', '85752'),
 (34631, 2916, 'KABUNA', '85752'),
@@ -43079,7 +43079,7 @@ VALUES
 (35380, 2992, 'GUNUNG SARI', '86116'),
 (35381, 2992, 'KABOR', '86112');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (35382, 2992, 'KOTA UNENG', '86113'),
 (35383, 2992, 'MADAWAT', '86112'),
@@ -43832,7 +43832,7 @@ VALUES
 (36136, 3065, 'KAZO KAPO', '86362'),
 (36137, 3065, 'NDORIWOI', '86362');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (36138, 3065, 'PADERAPE', '86362'),
 (36139, 3065, 'PUUTARA', '86362'),
@@ -44585,7 +44585,7 @@ VALUES
 (36891, 3127, 'LANGGA SAI', '86581'),
 (36892, 3127, 'LEMPANG PAJI', '86581');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (36893, 3127, 'MOSI NGARAN', '86581'),
 (36894, 3127, 'NANGA MEJE', '86581'),
@@ -45338,7 +45338,7 @@ VALUES
 (37646, 3193, 'NETEMNANU UTARA', '85364'),
 (37647, 3193, 'NUNUANAH', '85364');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (37648, 3194, 'FATUKANUTU (FATUKNUTU)', '85362'),
 (37649, 3194, 'FATUTETA', '85362'),
@@ -46091,7 +46091,7 @@ VALUES
 (38401, 3260, 'MANGGADAA', '95774'),
 (38402, 3260, 'MEYAMBANGA', '95774');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (38403, 3260, 'MILANGODAA', '95774'),
 (38404, 3260, 'MILANGODAA BARAT', '95774'),
@@ -46844,7 +46844,7 @@ VALUES
 (39157, 3328, 'BULUDE SELATAN', '95883'),
 (39158, 3328, 'ESSANG', '95883');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (39159, 3328, 'ESSANG SELATAN', '95883'),
 (39160, 3328, 'LALUE', '95883'),
@@ -47597,7 +47597,7 @@ VALUES
 (39911, 3404, 'KEBONAGUNG', '63152'),
 (39912, 3404, 'KEDUNGJATI', '63152');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (39913, 3404, 'KEDUNGREJO', '63152'),
 (39914, 3404, 'KUWU', '63152'),
@@ -48350,7 +48350,7 @@ VALUES
 (40664, 3462, 'NGADIREJAN', '63552'),
 (40665, 3462, 'PELEM', '63552');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (40666, 3462, 'POKO', '63552'),
 (40667, 3462, 'PRINGKUKU', '63552'),
@@ -49103,7 +49103,7 @@ VALUES
 (41416, 3537, 'SOPOBUTAR', '22263'),
 (41417, 3538, 'BAKAL GAJAH', '22262');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (41418, 3538, 'BONGKARAS', '22262'),
 (41419, 3538, 'BONIAN', '22262'),
@@ -49856,7 +49856,7 @@ VALUES
 (42168, 3590, 'SIANTAR ESTATE', '21151'),
 (42169, 3590, 'SILAMPUYANG', '21151');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (42170, 3590, 'SILAU MALAHA', '21151'),
 (42171, 3590, 'SILAU MANIK', '21151'),
@@ -50609,7 +50609,7 @@ VALUES
 (42920, 3651, 'BUKIT JENGKOL', '20858'),
 (42921, 3651, 'PANGKALAN SIATA', '20858');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (42922, 3651, 'PAYA TAMPAK', '20858'),
 (42923, 3651, 'PINTU AIR', '20858'),
@@ -51362,7 +51362,7 @@ VALUES
 (43670, 3707, 'CINTA AIR', '20986'),
 (43671, 3707, 'CITAMAN JERNIH', '20986');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (43672, 3707, 'DELI MUDA ILIR', '20986'),
 (43673, 3707, 'DELI MUDA ULU', '20986'),
@@ -52115,7 +52115,7 @@ VALUES
 (44423, 3762, 'BUTUH KIDUL', '56372'),
 (44424, 3762, 'KALIKAJAR', '56372');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (44425, 3762, 'KALIKUNING', '56372'),
 (44426, 3762, 'KARANGDUWUR', '56372'),
@@ -52868,7 +52868,7 @@ VALUES
 (45173, 3792, 'DANUPAYAN', '56253'),
 (45174, 3792, 'GANDUREJO', '56253');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (45175, 3792, 'GONDOSULI', '56253'),
 (45176, 3792, 'MALANGSARI', '56253'),
@@ -53621,7 +53621,7 @@ VALUES
 (45924, 3838, 'SIDOREJO', '61352'),
 (45925, 3839, 'BERATKULON', '61353');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (45926, 3839, 'BETRO', '61353'),
 (45927, 3839, 'JAPANAN', '61353'),
@@ -54374,7 +54374,7 @@ VALUES
 (46674, 3889, 'MUNUNG', '64392'),
 (46675, 3889, 'NGASEM', '64392');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (46676, 3889, 'PERNING', '64392'),
 (46677, 3889, 'PULE', '64392'),
@@ -55127,7 +55127,7 @@ VALUES
 (47426, 3955, 'PANDESARI', '65391'),
 (47427, 3955, 'PUJON KIDUL', '65391');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (47428, 3955, 'PUJON LOR', '65391'),
 (47429, 3955, 'SUKOMULYO', '65391'),
@@ -55880,7 +55880,7 @@ VALUES
 (48178, 4027, 'PADANG SARAI', '25173'),
 (48179, 4027, 'PARUPUK TABING', '25171');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (48180, 4027, 'PASIR/PASIE NAN TIGO', '25171'),
 (48181, 4028, 'AMPANG', '25154'),
@@ -56633,7 +56633,7 @@ VALUES
 (48936, 4130, 'KOTO TINGGI', '26256'),
 (48937, 4130, 'PANDAM GADANG', '26256');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (48938, 4130, 'TALANG ANAU', '26256'),
 (48939, 4131, 'BATU BALANG', '26271'),
@@ -57386,7 +57386,7 @@ VALUES
 (49698, 4256, 'LUBUK GAUNG', '28826'),
 (49699, 4256, 'TANJUNG PENYEMBAL', '28826');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (49700, 4257, 'BINTAN', '28812'),
 (49701, 4257, 'DUMAI KOTA', '28811'),
@@ -58139,7 +58139,7 @@ VALUES
 (50449, 4313, 'LAHANG TENGAH', '29282'),
 (50450, 4313, 'PINTASAN', '29282');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (50451, 4313, 'PUNGKAT', '29282'),
 (50452, 4313, 'SEMAMBU KUNING', '29282'),
@@ -58892,7 +58892,7 @@ VALUES
 (51205, 4375, 'TAMBUSAI BARAT', '28558'),
 (51206, 4375, 'TAMBUSAI TENGAH', '28558');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (51207, 4375, 'TAMBUSAI TIMUR', '28558'),
 (51208, 4375, 'TINGKOK', '28558'),
@@ -59645,7 +59645,7 @@ VALUES
 (51962, 4444, 'BANGUN SARI', '74562'),
 (51963, 4444, 'BELAWAN MULYA', '74562');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (51964, 4444, 'BERENG BELAWAN', '74562'),
 (51965, 4444, 'BERENG JUN', '74562'),
@@ -60398,7 +60398,7 @@ VALUES
 (52718, 4518, 'SAKO BARU', '30165'),
 (52719, 4518, 'SRI MULYA (SRIMULYO)', '30162');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (52720, 4518, 'SUKA MULYA', '30161'),
 (52721, 4519, 'JAMBE (TALANG JAMBE)', '30151'),
@@ -61151,7 +61151,7 @@ VALUES
 (53472, 4570, 'TANIA MAKMUR', '30657'),
 (53473, 4570, 'TANJUNG SARI I', '30657');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (53474, 4570, 'TANJUNG SARI II', '30657'),
 (53475, 4571, 'BANDAR AGUNG', '31414'),
@@ -61904,7 +61904,7 @@ VALUES
 (54226, 4626, 'KARANG RAJA', '31111'),
 (54227, 4626, 'MUARA DUA', '31113');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (54228, 4626, 'PRABU JAYA', '31111'),
 (54229, 4626, 'SUKAJADI', '31111'),
@@ -62657,7 +62657,7 @@ VALUES
 (54977, 4674, 'MUARA BARU', '30653'),
 (54978, 4674, 'MUARA DUA', '30653');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (54979, 4674, 'PALU', '30653'),
 (54980, 4674, 'PEGAYUT', '30653'),
@@ -63410,7 +63410,7 @@ VALUES
 (55727, 4725, 'SIMPANG SENDER UTARA', '32274'),
 (55728, 4725, 'SUBIK', '32274');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (55729, 4725, 'SUKABUMI', '32274'),
 (55730, 4725, 'SUKAMARGA', '32274'),
@@ -64163,7 +64163,7 @@ VALUES
 (56480, 4795, 'KASUARI', '94892'),
 (56481, 4795, 'KAUKES', '94892');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (56482, 4795, 'KEAK', '94892'),
 (56483, 4795, 'KOKUDANG', '94892'),
@@ -64916,7 +64916,7 @@ VALUES
 (57234, 4855, 'GERESA', '94973'),
 (57235, 4855, 'KOLONO', '94973');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (57236, 4855, 'LAHUAFU', '94973'),
 (57237, 4855, 'LAROUE', '94973'),
@@ -65669,7 +65669,7 @@ VALUES
 (57986, 4923, 'BANYUN SARI', '78872'),
 (57987, 4923, 'BENGARAS', '78872');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (57988, 4923, 'HARAPAN BARU', '78872'),
 (57989, 4923, 'KEPARI', '78872'),
@@ -66422,7 +66422,7 @@ VALUES
 (58740, 4982, 'NANGA DANGKAN I', '78774'),
 (58741, 4982, 'NANGA LUAN', '78774');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (58742, 4982, 'NANGA LUNGU', '78774'),
 (58743, 4982, 'NANGA NGERI', '78774'),
@@ -67175,7 +67175,7 @@ VALUES
 (59493, 5048, 'TANAH HITAM', '79466'),
 (59494, 5048, 'TEMAJUK', '79466');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (59495, 5049, 'GUGAH SEJAHTERA', '79453'),
 (59496, 5049, 'HARAPAN', '79453'),
@@ -67928,7 +67928,7 @@ VALUES
 (60244, 5111, 'MASANGAN', '67153'),
 (60245, 5111, 'POGAR', '67153');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (60246, 5111, 'RACI', '67153'),
 (60247, 5111, 'TAMBAKAN', '67153'),
@@ -68681,7 +68681,7 @@ VALUES
 (60996, 5187, 'MUARA SIRAM', '75772'),
 (60997, 5187, 'MUARAM SIRAM I (SIRAM MAKMUR)', '75772');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (60998, 5187, 'MUARAM SIRAM II (SIRAM JAYA)', '75772'),
 (60999, 5187, 'PENAWAI', '75772'),
@@ -69434,7 +69434,7 @@ VALUES
 (61747, 5269, 'WONODOYO', '57362'),
 (61748, 5270, 'CERME', '57391');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (61749, 5270, 'JERUKAN', '57391'),
 (61750, 5270, 'JUWANGI', '57391'),
@@ -70187,7 +70187,7 @@ VALUES
 (62498, 5324, 'NGLINGGI', '57422'),
 (62499, 5324, 'SUMBEREJO', '57426');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (62500, 5324, 'TEGALYOSO', '57424'),
 (62501, 5324, 'TRUNUH', '57421'),
@@ -70940,7 +70940,7 @@ VALUES
 (63248, 5391, 'MARIAT GUNUNG', '98457'),
 (63249, 5391, 'MARIAT PANTAI', '98457');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (63250, 5391, 'WARMON', '98457'),
 (63251, 5392, 'BAGUNG', '98453'),
@@ -71693,7 +71693,7 @@ VALUES
 (63999, 5485, 'ASSES', '98461'),
 (64000, 5485, 'FAIT NGGRE', '98461');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (64001, 5485, 'FAITSIMAR', '98461'),
 (64002, 5485, 'ISNUM', '98461'),
@@ -72446,7 +72446,7 @@ VALUES
 (64751, 5566, 'ARAMPAK', '98372'),
 (64752, 5566, 'ARUMI', '98372');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (64753, 5566, 'INAM', '98372'),
 (64754, 5566, 'INAMBUARI', '98372'),
@@ -73199,7 +73199,7 @@ VALUES
 (65503, 5635, 'GERLANG', '51255'),
 (65504, 5635, 'GONDANG', '51255');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (65505, 5635, 'KALIPANCUR', '51255'),
 (65506, 5635, 'KALISARI', '51255'),
@@ -73952,7 +73952,7 @@ VALUES
 (66253, 5678, 'TAPELAN', '62165'),
 (66254, 5679, 'BANJARJO', '62162');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (66255, 5679, 'CENDONO', '62162'),
 (66256, 5679, 'DENGOK', '62162'),
@@ -74705,7 +74705,7 @@ VALUES
 (67003, 5727, 'SENTUL', '59157'),
 (67004, 5727, 'SIRAHAN', '59157');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (67005, 5727, 'SUMUR', '59157'),
 (67006, 5728, 'ALASDOWO', '59158'),
@@ -75458,7 +75458,7 @@ VALUES
 (67753, 5771, 'TRUWOLU', '58193'),
 (67754, 5772, 'BOLOGARANG', '58161');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (67755, 5772, 'CURUT', '58161'),
 (67756, 5772, 'JIPANG', '58161'),
@@ -76211,7 +76211,7 @@ VALUES
 (68506, 5822, 'KALIJARAN', '53354'),
 (68507, 5822, 'KALIORI', '53354');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (68508, 5822, 'KARANGANYAR', '53354'),
 (68509, 5822, 'KARANGGEDANG', '53354'),
@@ -76964,7 +76964,7 @@ VALUES
 (69257, 5883, 'KEDURUS', '60223'),
 (69258, 5883, 'WARU GUNUNG', '60221');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (69259, 5884, 'BULAK BANTENG', '60127'),
 (69260, 5884, 'SIDOTOPO/SIDOROPO WETAN', '60128'),
@@ -77717,7 +77717,7 @@ VALUES
 (70007, 5937, 'PACIRAN', '62264'),
 (70008, 5937, 'PALOH', '62264');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (70009, 5937, 'SENDANGAGUNG', '62264'),
 (70010, 5937, 'SENDANGDUWUR', '62264'),
@@ -78470,7 +78470,7 @@ VALUES
 (70757, 5985, 'KETAPANG LAOK', '69261'),
 (70758, 5985, 'KETAPANG TIMUR', '69261');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (70759, 5985, 'PANCOR', '69261'),
 (70760, 5985, 'PANGEREMAN', '69261'),
@@ -79223,7 +79223,7 @@ VALUES
 (71507, 6035, 'MUANGAN', '69467'),
 (71508, 6035, 'NAMBAKOR', '69467');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (71509, 6035, 'PAGARBATU', '69467'),
 (71510, 6035, 'SAROKA', '69467'),
@@ -79976,7 +79976,7 @@ VALUES
 (72257, 6088, 'PUYUNG', '66362'),
 (72258, 6088, 'SIDOMULYO', '66362');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (72259, 6088, 'SUKOKIDUL', '66362'),
 (72260, 6088, 'TANGGARAN', '66362'),
@@ -80729,7 +80729,7 @@ VALUES
 (73009, 6140, 'TAMANSARI', '53161'),
 (73010, 6141, 'ADISANA', '53172');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (73011, 6141, 'BANGSA', '53172'),
 (73012, 6141, 'CINDAGA', '53172'),
@@ -81482,7 +81482,7 @@ VALUES
 (73761, 6217, 'KAMORO', '99972'),
 (73762, 6217, 'KEAKWA', '99972');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (73763, 6217, 'TIWAKA', '99972'),
 (73764, 6218, 'AINGOGIN', '99967'),
@@ -82235,7 +82235,7 @@ VALUES
 (74513, 6292, 'WAY ISEM', '34558'),
 (74514, 6293, 'BERINGIN JAYA', '34555');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (74515, 6293, 'BUNGLAY TENGAH (BUNGLAO/BONGLAI)', '34555'),
 (74516, 6293, 'GEDUNG MAKRIFAT', '34555'),
@@ -82988,7 +82988,7 @@ VALUES
 (75265, 6364, 'SUMBERJO', '34396'),
 (75266, 6364, 'SUMUR BANDUNG', '34396');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (75267, 6365, 'BANDAR AGUNG', '34389'),
 (75268, 6365, 'MEKAR JAYA', '34389'),
@@ -83741,7 +83741,7 @@ VALUES
 (76019, 6422, 'SOPONYONO', '35686'),
 (76020, 6422, 'SRI MELATI', '35686');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (76021, 6422, 'SRIDADI', '35686'),
 (76022, 6422, 'SUMUR TUJUH', '35686'),
@@ -84494,7 +84494,7 @@ VALUES
 (76776, 6495, 'SENTABAN', '77554'),
 (76777, 6495, 'SESUA', '77554');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (76778, 6495, 'TANJUNG LAPANG', '77554'),
 (76779, 6495, 'TARAS', '77554'),
@@ -85247,7 +85247,7 @@ VALUES
 (77528, 6573, 'CILOLOHAN', '46184'),
 (77529, 6573, 'CINTAJAYA', '46184');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (77530, 6573, 'SUKANAGARA', '46184'),
 (77531, 6573, 'SUKASENANG', '46184'),
@@ -86000,7 +86000,7 @@ VALUES
 (78280, 6639, 'WARINGI', '97792'),
 (78281, 6640, 'KELLO (KELO)', '97792');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (78282, 6640, 'SOSEPE', '97792'),
 (78283, 6640, 'SUM', '97792'),
@@ -86753,7 +86753,7 @@ VALUES
 (79031, 6722, 'MAITARA SELATAN', '97813'),
 (79032, 6722, 'MAITARA TENGAH', '97813');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (79033, 6722, 'MAITARA UTARA', '97813'),
 (79034, 6722, 'MAREKU', '97813'),
@@ -87506,7 +87506,7 @@ VALUES
 (79782, 6793, 'RANTEDADA', '91871'),
 (79783, 6793, 'SIMBUANG', '91871');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (79784, 6793, 'TAMPO', '91871'),
 (79785, 6793, 'TENGAN', '91871'),
@@ -88259,7 +88259,7 @@ VALUES
 (80538, 6886, 'LERANG', '91272'),
 (80539, 6886, 'MALLONGI LONGI', '91272');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (80540, 6886, 'SAMAULUE', '91272'),
 (80541, 6886, 'WAE TUWOE', '91272'),
@@ -89012,7 +89012,7 @@ VALUES
 (81294, 6959, 'BONTOLEBANG', '92255'),
 (81295, 6959, 'PAKKABBA', '92255');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (81296, 6959, 'SAMPULUNGAN', '92255'),
 (81297, 6959, 'TAMALATE', '92255'),
@@ -89765,7 +89765,7 @@ VALUES
 (82049, 7031, 'JAMBU', '91995'),
 (82050, 7031, 'LANGKIDDI', '91995');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (82051, 7031, 'PANGI', '91995'),
 (82052, 7031, 'RUMAJU', '91995'),
@@ -90518,7 +90518,7 @@ VALUES
 (82799, 7102, 'KASTA BUANA', '91572'),
 (82800, 7102, 'LELEJAE', '91572');
 
-INSERT INTO raja_sub_districts (id, district_id, name, zip_code)
+INSERT INTO sub_districts (id, district_id, name, zip_code)
 VALUES
 (82801, 7102, 'LILIMORI (LELEMORI)', '91572'),
 (82802, 7102, 'OMPI', '91572'),
